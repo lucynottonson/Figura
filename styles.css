@@ -12,8 +12,14 @@ html, body {
     background-color: rgb(201, 255, 190);
     font-family: 'Anonymous Pro', monospace;
 }
-h1, h2, h3 {
+h1 {
     font-family: 'Anonymous Pro', monospace;
+    color:#91124d
+}
+
+h2, h3 {
+    font-family: 'Anonymous Pro', monospace;
+    color:#133
   }
   
   .code-block {

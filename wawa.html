@@ -1,18 +1,38 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Figura</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">   
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <h1>Hi this is wawa</h1>
-        <a href="index.html">
-            <button>go back to the first page</button>
-        </a>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Figura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+  </head>
+  <body>
+    <a href="index.html">
+      <button>go back to the first page</button>
+    </a>
+    <button id="info-button">info</button>
+
+    <div id="info-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.9); color: white; z-index: 9999; display: flex; justify-content: center; align-items: center; text-align: center;">
+      <button id="close-popup">&times;</button>
+      <p style="font-size: 1.5em;">This is wawa. Similarly to Okra it does not exist yet. If you are  wondering what these names mean, they do not mean anything. I wrote the first word or collection of letters that came to mind when I laid out each page. I think I was hungry because three of them are food. When I make more, if I make more, those names won't mean anything either. Maybe they say something about my unconsious if you're into that. I'm not buying that though. Anyway I'll fill this with something. I know this is the first button that shows up. I don't feel like rearranging them. The first sketch I made was bug, then fig, then lemon, then keeth which doesn't technically exist yet and is currently just a copy of fig. If I forget to change this description after updating fig, which I probably will, then you know the secret information that keeth originated from fig. Fig is sort of like keeth's mom. I know this makes me seem insane. I have personified the pages, which I know isn't normal. I am aware they are not sentient. I am just having fun. And I can't really see what I'm writing because in the code this is all on one line which I can only see part of at a time, So I hope this is an acceptable first page description size, even though chronologically it is not the first page but actually the last page that I am writing a description for. That is because vscode arranges the pages in alphabetical order and this one starts with a W. I don't know how to change the order it arranges the pages in, or if you can at all.</p>
+    </div>
+
+    <script>
+      const infoButton = document.getElementById("info-button");
+      const infoPopup = document.getElementById("info-popup");
+      const closePopup = document.getElementById("close-popup");
+
+      infoButton.addEventListener("click", () => {
+        infoPopup.style.display = "block";
+      });
+
+      closePopup.addEventListener("click", () => {
+        infoPopup.style.display = "none";
+      });
+    </script>
+    <script src="p5/wawa.js"></script>
+  </body>
 </html>

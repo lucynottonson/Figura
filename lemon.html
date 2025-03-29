@@ -11,8 +11,28 @@
   </head>
   <body>
     <a href="index.html">
-        <button>go back to the first page</button>
+      <button>go back to the first page</button>
     </a>
+    <button id="info-button">info</button>
+
+    <div id="info-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.9); color: white; z-index: 9999; display: flex; justify-content: center; align-items: center; text-align: center;">
+      <button id="close-popup">&times;</button>
+      <p style="font-size: 1.5em;">This is lemon. I really liked the fig balls so I made an entire new sketch just for the balls to bounce around. If you click reset it will regenerate. If you click your mouse it will shoot a new ball in a random color out into the environment, but its path will remain the same throughout the lifetime of the sketch, so if you click a bunch of times you can just make a chain of balls that bounce all together. You can play around with that. This is the most customizable sketch I've made so far but it wasn't intentional, this was the lowest effort sketch I think. If you save as png it will save as png. If you'll notice, the buttons are slightly different on this page. I am not a fan of that but there is not much I can do about it. </p>
+    </div>
+
+    <script>
+      const infoButton = document.getElementById("info-button");
+      const infoPopup = document.getElementById("info-popup");
+      const closePopup = document.getElementById("close-popup");
+
+      infoButton.addEventListener("click", () => {
+        infoPopup.style.display = "block";
+      });
+
+      closePopup.addEventListener("click", () => {
+        infoPopup.style.display = "none";
+      });
+    </script>
     <script src="p5/lemon.js"></script>
-    </body>
+  </body>
 </html>

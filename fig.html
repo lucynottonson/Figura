@@ -11,8 +11,28 @@
   </head>
   <body>
     <a href="index.html">
-        <button>go back to the first page</button>
+      <button>go back to the first page</button>
     </a>
+    <button id="info-button">info</button>
+
+    <div id="info-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.9); color: white; z-index: 9999; display: flex; justify-content: center; align-items: center; text-align: center;">
+      <button id="close-popup">&times;</button>
+      <p style="font-size: 1.5em;">This is Fig. Fig is a room with wooden floors with little toruses and balls bouncing around. This worked when I first made it, but now it is having trouble rendering. It would not render on my phone for more than five seconds. I think it doesn't like how many shapes there are. The toruses are changing shape, rotation, and size with perlin noise randomly. The balls just bounce around and they are all the same size. If your page can handle it and you watch for long enough, the balls sometimes go through the toruses. You can also move around using the arrow keys, but they have a set direction and do not adapt to the direction you are facing, so you can sort of consider them more like a compass. I don't know how to fix that. All the colors are randomly generated. If you click reset it will randomly generate a new set of toruses and balls. You can save any frame as a PNG. Like I said on bug, if you spam click that you can save like a million copies of the same file in only ten seconds. Once you know it is that easy it becomes sort of tempting to see how many you can save. I did that and I had to delete them all from my laptop, so I wouldn't recommend that.</p>
+    </div>
+
+    <script>
+      const infoButton = document.getElementById("info-button");
+      const infoPopup = document.getElementById("info-popup");
+      const closePopup = document.getElementById("close-popup");
+
+      infoButton.addEventListener("click", () => {
+        infoPopup.style.display = "block";
+      });
+
+      closePopup.addEventListener("click", () => {
+        infoPopup.style.display = "none";
+      });
+    </script>
     <script src="p5/fig.js"></script>
-    </body>
+  </body>
 </html>
