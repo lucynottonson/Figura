@@ -17,7 +17,7 @@
 
     <div id="info-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.9); color: white; z-index: 9999; display: flex; justify-content: center; align-items: center; text-align: center;">
       <button id="close-popup">&times;</button>
-      <p style="font-size: 1.5em;">This is Keeth. Right now if you will notice, Keeth and Fig are the exact same sketch. That is because I didn't feel like writing out all of the button code again so I copy pasted the entire fig sketch onto the keeth file and when I make keeth I can just edit the sketch instead of the entire page again. In hindsight I should not have added the save and reset buttons to the .js file with the sketch because they are connected to the shape of the canvas and so they don't go with the top two buttons. Or I should have had all the buttons be on the .js page. But I didn't, and I want all the pages to be the same. I believe one of them already isn't but thats just something I have to either accept or fix later. </p>
+      <p style="font-size: 1.5em;">This is Keeth. I'm trying to use zdog now. This was just so I could figure out how to put the canvas on the page. These wont save as png files, that is kind of useless for non generative stuff so I don't see the need to include it in these pages. Idk what this will turn into but its a cube right now. </p>
     </div>
 
     <script>
@@ -33,6 +33,8 @@
         infoPopup.style.display = "none";
       });
     </script>
-    <script src="p5/keeth.js"></script>
-  </body>
+    <canvas></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/zdog@1/dist/zdog.dist.min.js"></script>
+    <script src="zdog/keeth.js"></script>
+</body>
 </html>
