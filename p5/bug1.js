@@ -16,6 +16,7 @@ function setup() {
   let canvasY = (windowHeight - canvasSize) / 2;
 
   let cnv = createCanvas(canvasSize, canvasSize);
+  cnv.class('p5-canvas');
   cnv.position(canvasX, canvasY);
 
   x = random(width);
@@ -123,10 +124,6 @@ function windowResized() {
   let canvasY = (windowHeight - canvasSize) / 2;
 
   resizeCanvas(canvasSize, canvasSize);
-  let cnv = document.getElementsByTagName('canvas')[0];
-  cnv.style.position = 'absolute';
-  cnv.style.left = canvasX + 'px';
-  cnv.style.top = canvasY + 'px';
 
   let buttonY = canvasY + canvasSize + 20;
   let buttons = document.getElementsByTagName('button');

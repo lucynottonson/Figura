@@ -1,15 +1,14 @@
 const canvas = document.querySelector('canvas');
-const scale = 0.8; 
-const size = Math.min(window.innerWidth, window.innerHeight) * scale;
-canvas.width = size;
-canvas.height = size;
-canvas.style.width = `${size}px`;
-canvas.style.height = `${size}px`;
+canvas.classList.add('zdog-canvas');
+
+const rect = canvas.getBoundingClientRect();
+canvas.width = rect.width;
+canvas.height = rect.height;
 
 const illo = new Zdog.Illustration({
   element: canvas,
   dragRotate: true,
-  zoom: 2, 
+  zoom: 4,
 });
 
 new Zdog.Box({

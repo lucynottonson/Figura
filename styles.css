@@ -60,9 +60,14 @@ button:hover {
 
 canvas {
     display: block;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: #f0f0f0;
+  }
+  
+  .zdog-canvas {
+    width: 100vmin;
+    height: 100vmin;
+  }
+  
+  .p5-canvas {
+    width: 40vmin;
+    height: 40vmin;
   }

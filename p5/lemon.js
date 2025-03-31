@@ -15,7 +15,7 @@ function setup() {
   let canvasY = (windowHeight - canvasSize) / 2;
 
   let cnv = createCanvas(canvasSize, canvasSize, WEBGL);
-  cnv.position(canvasX, canvasY);
+  cnv.class('p5-canvas');
 
   resetButton = createButton('reset');
   resetButton.position(20, windowHeight - 60);
@@ -96,8 +96,4 @@ function windowResized() {
   let canvasY = (windowHeight - canvasSize) / 2;
 
   resizeCanvas(canvasSize, canvasSize);
-  let cnv = document.getElementsByTagName('canvas')[0];
-  cnv.style.position = 'absolute';
-  cnv.style.left = canvasX + 'px';
-  cnv.style.top = canvasY + 'px';
 }
